@@ -1,115 +1,3 @@
-*, ::after, ::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  color: #777777;
-  font-size: 1.6rem;
-  letter-spacing: 0.2rem;
-  padding: 5rem;
-  background-color: #ffffff;
-}
-
-.container {
-  background-color: #F7F7F7;
-}
-
-.header {
-  height: 95vh;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/balloons.jpg") center/cover no-repeat;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-  position: relative;
-}
-.header__logo {
-  position: absolute;
-  top: 5rem;
-  left: 5rem;
-  height: 7rem;
-  width: 5.6rem;
-}
-.header__box {
-  position: absolute;
-  top: 43%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-}
-
-.main-title {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  color: #fff;
-  margin-bottom: 5rem;
-}
-.main-title__main {
-  font-weight: 800;
-  font-size: 5rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  animation: toRight 2s ease 1s;
-  animation-fill-mode: backwards;
-}
-.main-title__secondary {
-  font-weight: 100;
-  font-size: 4rem;
-  letter-spacing: 0.12em;
-  animation: toLeft 2s ease 1s;
-  animation-fill-mode: backwards;
-}
-
-.btn:link, .btn:visited {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 2rem;
-  letter-spacing: 0.25em;
-  color: inherit;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  background: #fff;
-  border-radius: 5rem;
-  transition: all 250ms;
-  position: relative;
-}
-.btn:hover {
-  transform: translateY(-0.4rem);
-  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.5);
-}
-.btn:hover::after {
-  transform: scale(1.6);
-  opacity: 0;
-}
-.btn:active {
-  transform: translateY(-0.2rem);
-  box-shadow: 0 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
-}
-.btn::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  border-radius: 5rem;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: 250ms;
-}
-.btn_animated {
-  animation: toUp 500ms ease 0.7s;
-  animation-fill-mode: backwards;
-}
-
 @keyframes toRight {
   0% {
     opacity: 0;
@@ -145,4 +33,332 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.btn:link, .btn:visited {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #777777;
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: 0.25em;
+  padding: 1.5rem 4rem;
+  background: #ffffff;
+  border-radius: 5rem;
+  transition: all 250ms;
+  position: relative;
+}
+.btn:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0rem 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.5);
+}
+.btn:hover::after {
+  transform: scale(1.6);
+  opacity: 0;
+}
+.btn:active {
+  transform: translateY(-0.2rem);
+  box-shadow: 0rem 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.5);
+}
+.btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 5rem;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 250ms;
+}
+.btn_animated {
+  animation: toUp 500ms ease 0.7s;
+  animation-fill-mode: backwards;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 5rem;
+  background-color: #ffffff;
+}
+
+.container {
+  background-color: #f7f7f7;
+}
+
+.header {
+  height: 95vh;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/balloons.jpg") center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  position: relative;
+}
+.header__logo {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  height: 7rem;
+  width: 5.6rem;
+}
+.header__box {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #777777;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #ffffff;
+  margin-bottom: 5rem;
+}
+.main-title__main {
+  font-weight: 800;
+  font-size: 5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  animation: toRight 2s ease 1s;
+  animation-fill-mode: backwards;
+}
+.main-title__secondary {
+  font-weight: 100;
+  font-size: 4rem;
+  letter-spacing: 0.12em;
+  animation: toLeft 2s ease 1s;
+  animation-fill-mode: backwards;
+}
+
+.title-secondary {
+  font-weight: 800;
+  font-size: 3.6rem;
+  letter-spacing: 0.28em;
+  background: linear-gradient(90deg, #ba8554 3.65%, #a14f03 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  transition: all 250ms;
+  display: inline-block;
+  backface-visibility: hidden;
+}
+.title-secondary:hover {
+  transform: skew(15deg, 2deg) scale(1.1);
+  text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+
+.title-third {
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 140%;
+  letter-spacing: 0.12em;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+
+.col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+
+.col-2-of-3 {
+  width: calc(2 * (100% - 2 * 6rem) / 3 + 6rem);
+}
+
+.col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.col-2-of-4 {
+  width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem);
+}
+
+.col-3-of-4 {
+  width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
+}
+
+[class^=col-] {
+  float: left;
+}
+[class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.about-section {
+  padding-top: 8rem;
+  margin-bottom: 54px;
+}
+
+.adventure-section {
+  padding: 26rem 10rem;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/back-bal.jpg") center/cover no-repeat;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+}
+
+.tours-section {
+  padding-top: 8rem;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.margin-bottom-10px {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-25px {
+  margin-bottom: 2.5rem;
+}
+
+.margin-bottom-30px {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-50px {
+  margin-bottom: 5rem;
+}
+
+.margin-bottom-80px {
+  margin-bottom: 8rem;
+}
+
+.btn-text:link, .btn-text:visited {
+  font-weight: 700;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  color: #ba8554;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 0.8rem;
+  border-bottom: 1px solid #ba8554;
+  transition: all 250ms;
+}
+.btn-text:hover {
+  background-color: #ba8554;
+  color: #ffffff;
+  box-shadow: 0rem 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.5);
+  transform: translateY(-1rem);
+}
+.btn-text:active {
+  transform: translateY(-0.2rem);
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 59%;
+  box-shadow: 0rem 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  position: absolute;
+  transition: all 250ms;
+  outline-offset: 1rem;
+}
+.composition__photo:hover {
+  transform: scale(1.1);
+  outline: 1rem solid #ba8554;
+  z-index: 20;
+}
+.composition__photo_n2 {
+  top: 8.9rem;
+  left: 22.1rem;
+}
+.composition__photo_n3 {
+  top: 16.4rem;
+  left: 2.2rem;
+}
+.composition:hover .composition__photo:not(:hover) {
+  transform: scale(0.9);
+}
+
+.adventure-card {
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0rem 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 250ms;
+}
+.adventure-card:hover {
+  transform: translateY(-1rem);
+}
+.adventure-card__icon {
+  font-size: 6.3rem;
+  display: inline-block;
+  background: linear-gradient(90deg, #ba8554 3.65%, #a14f03 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.tour-card {
+  height: 52rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+.tour-card__side {
+  height: 52rem;
+  color: red;
+  transition: all 750ms ease-out;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+.tour-card__side_front {
+  background-color: yellow;
+}
+.tour-card__side_back {
+  background: linear-gradient(135deg, #ba8554 3.65%, #a14f03 100%);
+  transform: rotateY(180deg);
+}
+.tour-card:hover .tour-card__side_front {
+  transform: rotateY(180deg);
+}
+.tour-card:hover .tour-card__side_back {
+  transform: rotateY(0deg);
 }/*# sourceMappingURL=style.css.map */
