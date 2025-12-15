@@ -1,0 +1,47 @@
+.feedback-card
+  width: 80%
+  margin: 0 auto
+  padding: 5rem 12rem
+  box-shadow: $box-shadow
+  background-color: rgba($color-white, 0.8)
+  transform: skewX(-20deg)
+  & > *
+    transform: skewX(20deg)
+  &__box
+  &__figure
+    width: 16.7rem
+    height: 16.7rem
+    border-radius: 50%
+    overflow: hidden
+    float: left
+    -webkit-shape-outside: circle(50% at 50% 50%)
+    margin-right: 2.3rem
+    position: relative
+    img
+      height: 100%
+      transform: scale(1.2)
+  &__capture
+    font-weight: 400
+    font-size: 2.4rem
+    letter-spacing: 0.08em
+    text-align: center
+    color: $color-white
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -20%)
+    opacity: 0
+    transition: all 250ms
+  &__image
+    transition: all 250ms
+  &:hover &__capture
+    transform: translate(-50%, -50%)
+    opacity: 1
+  &:hover &__capture
+    transform: translate(-50%, -50%)
+    opacity: 1
+  &:hover &__image
+    filter: blur(.3rem) brightness(.5)
+    transform: scale(1)
+
+    

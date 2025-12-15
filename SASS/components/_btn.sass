@@ -9,15 +9,14 @@
     border-radius: 5rem
     transition: all 250ms
     position: relative
+    box-shadow: $box-shadow
   &:hover
     transform: translateY(-.4rem)
-    box-shadow: $box-shadow
     &::after
       transform: scale(1.6)
       opacity: 0
   &:active
     transform: translateY(-.2rem)
-    box-shadow: $box-shadow
   &::after
     content: ''
     width: 100%
