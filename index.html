@@ -171,6 +171,8 @@
     </section>
     
     <section class="feedback-section">
+      <div class="bg-gradient"></div>
+      <video src="./video/video-background.mp4" autoplay muted loop class="bg_video"></video>
         <div class="text-align-center margin-bottom-80px">
           <h2 class="title-secondary title-secondary_white">ОТЗЫВЫ НАШИХ КЛИЕНТОВ</h2>
       </div>
@@ -178,7 +180,7 @@
        <div class="row">
           <div class="feedback-card">
             <figure class="feedback-card__figure">
-              <img src="/img/feedback1.jpg" alt="feedback1" class="feedback-card__image">
+              <img src="./img/feedback1.jpg" alt="feedback1" class="feedback-card__image">
               <figcaption class="feedback-card__capture">ЛИЗА ФРОЛОВА</figcaption>
             </figure>
             <div class="feedback-card__box">
@@ -193,7 +195,7 @@
        <div class="row">
           <div class="feedback-card">
             <figure class="feedback-card__figure">
-              <img src="/img/feedback2.jpg" alt="feedback1" class="feedback-card__image">
+              <img src="./img/feedback2.jpg" alt="feedback1" class="feedback-card__image">
               <figcaption class="feedback-card__capture">АНТОН РЯБИН</figcaption>
             </figure>
             <div class="feedback-card__box">
@@ -205,8 +207,49 @@
           </div>
        </div>
 
-      <div class="text-align-center margin-bottom-80px">
+      <div class="text-align-center">
         <a href="#" class="btn btn_animated">ЗАБРОНИРОВАТЬ</a>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <div class="row">
+        <div class="book">
+          <form action="" class="form">
+            <div class="text-align-center margin-bottom-30px">
+              <h2 class="title-secondary">ЗАБРОНИРОВАТЬ ТУР</h2>
+            </div>
+            <div class="form__group margin-bottom-20px" >
+              <input type="text" id="name" placeholder="Имя Фамилия" required class="form__input">
+              <label for="email" class="form__label">Имя Фамилия</label>
+            </div>
+            <div class="form__group margin-bottom-20px">
+              <input type="email" id="emal" placeholder="Ваше email" class="form__input">
+              <label for="email" class="form__label">Почтовый адрес</label>
+            </div>
+
+            <div class="form__group margin-bottom-30px">
+              <div class="form__group-radio">
+                <input type="radio" id="radio1" class="form__input-radio" name="radio">
+                <label for="radio1" class="form__label-radio">
+                  <span class="form__button-radio"></span>
+                  Групповой тур
+                </label>
+              </div>
+              <div class="form__group-radio">
+                <input type="radio" id="radio2" class="form__input-radio" name="radio">
+                <label for="radio2" class="form__label-radio">
+                  <span class="form__button-radio"></span>
+                  Индивидуальный тур
+                </label>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <button class="btn btn_brown">ЗАБРОНИРОВАТЬ</button>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>

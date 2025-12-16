@@ -34,7 +34,7 @@
     transform: translateY(0);
   }
 }
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
@@ -48,6 +48,7 @@
   transition: all 250ms;
   position: relative;
   box-shadow: 0rem 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.5);
+  border: none;
 }
 .btn:hover {
   transform: translateY(-0.4rem);
@@ -76,6 +77,13 @@
   animation: toUp 500ms ease 0.7s;
   animation-fill-mode: backwards;
 }
+.btn_brown {
+  background-color: #a14f03;
+  color: #ffffff;
+}
+.btn_brown::after {
+  background-color: #a14f03;
+}
 
 *, ::after, ::before {
   margin: 0;
@@ -94,6 +102,8 @@ body {
 
 .container {
   background-color: #f7f7f7;
+  position: relative;
+  z-index: 0;
 }
 
 .header {
@@ -244,7 +254,13 @@ body {
 }
 
 .feedback-section {
-  padding-top: 8rem;
+  padding: 8rem 0;
+  position: relative;
+}
+
+.form-section {
+  padding: 10rem;
+  background: linear-gradient(90deg, #ba8554, #a14f03);
 }
 
 .text-align-center {
@@ -389,13 +405,13 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
 .tour-card__img_1 {
-  background: #ba8554 url("/img/card1.jpg") center/cover no-repeat;
+  background: #ba8554 url("../img/card1.jpg") center/cover no-repeat;
 }
 .tour-card__img_2 {
-  background: #ba8554 url("/img/card2.jpg") center/cover no-repeat;
+  background: #ba8554 url("../img/card2.jpg") center/cover no-repeat;
 }
 .tour-card__img_3 {
-  background: #ba8554 url("/img/card3.jpg") center/cover no-repeat;
+  background: #ba8554 url("../img/card3.jpg") center/cover no-repeat;
 }
 .tour-card__title {
   font-weight: 300;
@@ -509,4 +525,118 @@ body {
 .feedback-card:hover .feedback-card__image {
   filter: blur(0.3rem) brightness(0.5);
   transform: scale(1);
+}
+
+.bg_video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -2;
+}
+
+.bg-gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(0, 0, 0, 0.7));
+  z-index: -1;
+}
+
+.book {
+  padding: 5rem;
+  background: linear-gradient(111deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.64) 55%, rgba(186, 133, 84, 0.65) 55%, rgba(161, 79, 3, 0.65) 100%), url("/img/form-bg.jpg") center/cover no-repeat;
+  box-shadow: 0rem 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0.4rem;
+}
+
+.form {
+  width: 60%;
+}
+.form__input {
+  padding: 1.8rem 2.2rem;
+  outline: none;
+  border: none;
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  color: #000;
+  border-radius: 0.3rem;
+  border-bottom: 0.2rem solid transparent;
+}
+.form__input:focus {
+  box-shadow: 0rem 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.5);
+  border-bottom: 0.2rem solid green;
+}
+.form__input:focus:invalid {
+  border-bottom: 0.2rem solid red;
+}
+.form__input:-moz-placeholder + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-0.5rem);
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-0.5rem);
+}
+.form__label {
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  color: #777777;
+  display: block;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  transition: all 550ms;
+}
+.form__input-radio {
+  display: none;
+}
+.form__label-radio {
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.2rem;
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  color: #777777;
+}
+.form__button-radio {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border: 0.4rem solid #a14f03;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.7rem;
+  left: 0;
+}
+.form__button-radio::after {
+  content: "";
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  border-radius: 50%;
+  background-color: #a14f03;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 250ms;
+}
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after {
+  opacity: 1;
+}
+
+.form__group-radio {
+  display: inline-block;
+  width: 43%;
 }/*# sourceMappingURL=style.css.map */
