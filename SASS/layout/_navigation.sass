@@ -9,7 +9,7 @@
     right: 10rem
     z-index: 210
     text-align: center
-    padding-top: 20px
+    padding-top: 2rem
     cursor: pointer
   &__back
     width: 7rem
@@ -62,23 +62,23 @@
   &__icon
     position: relative
     &, &::after, &::before
-      width: 40px
-      height: 2px
+      width: 4rem
+      height: .2rem
       background-color: $color-black
       display: inline-block
       transition: all 250ms
     &::after, &::before
       content: ''
       position: absolute
-      left: 0px
+      left: 0rem
     &::after
-      top: 7px
+      top: .7rem
     &::before
-      top: -7px
+      top: -.7rem
   &__label:hover &__icon::after
-    top: 10px
+    top: 1rem
   &__label:hover &__icon::before
-    top: -10px
+    top: -1rem
   &__input:checked + &__label &__icon
     background-color: transparent
   &__input:checked + &__label &__icon::before

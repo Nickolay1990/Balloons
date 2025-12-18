@@ -11,6 +11,8 @@
     position: relative
     box-shadow: $box-shadow
     border: none
+    @include respond(tab-land)
+      font-size: 1.6rem
   &:hover
     transform: translateY(-.4rem)
     &::after

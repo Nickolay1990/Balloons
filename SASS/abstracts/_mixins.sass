@@ -11,4 +11,18 @@
     display: table
     clear: both
   
-    
+
+@mixin respond($gadget)
+  @if $gadget == phone
+    @media (max-width: 600px)
+      @content
+  @if $gadget == tab-port
+    @media (max-width: 900px)
+      @content
+  @if $gadget == tab-land
+    @media (max-width: 1240px)
+      @content
+  @if $gadget == desc
+    @media (min-width: 1800px)
+      @content
+      

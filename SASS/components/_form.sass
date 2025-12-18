@@ -5,7 +5,7 @@
   border-radius: .4rem
 
 .form
-  width: 60%
+  width: 70%
   &__input
     padding: 1.8rem 2.2rem
     outline: none
@@ -71,5 +71,8 @@
 
 .form__group-radio
   display: inline-block
-  width: 43%
+  &:not(:last-child)
+    margin-right: 1.5rem
+  @include respond(tab-land)
+    margin-bottom: 1.5rem
 
